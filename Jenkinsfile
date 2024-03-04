@@ -27,7 +27,7 @@ pipeline {
                         dir("terraform")
                         {
                             sh("""
-                                git clone "https://github.com/Harshahd97/modules_practice.git"
+                                git clone "https://github.com/Harshahd97/sample_terraform_file.git"
                              """)
                         }
                     }
