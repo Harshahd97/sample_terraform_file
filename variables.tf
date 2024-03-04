@@ -1,22 +1,36 @@
-variable "region" {
-  type    = string
-  default = "us-east-2"
+variable "aws_access_key" {
+  description = "AWS access key"
+  type        = string
+  default     = ""
 }
 
-variable "vpc_cidr_block" {
-  default = "20.0.0.0/16"
+variable "aws_secret_key" {
+  description = "AWS secret key"
+  type        = string
+  default     = ""
 }
 
-variable "subnet_cidr_blocks" {
-  default = {
-    "subnet1" = "20.0.1.0/24"
-    "subnet2" = "20.0.2.0/24"
-    "subnet3" = "20.0.3.0/24"
-  }
+variable "aws_region" {
+  description = "AWS region"
+  type        = string
+  default     = "ap-south-1"
 }
 
-variable "tag_name" {
-  description = "tag for subnet"
-  type = string
-  default = "mysubnet_"
+
+variable "ami" {
+   type        = string
+   description = "Ubuntu AMI ID"
+   default     = "ami-0f5ee92e2d63afc18"
+}
+
+variable "instance_type" {
+   type        = string
+   description = "Instance type"
+   default     = "t2.micro"
+}
+
+variable "name_tag" {
+   type        = string
+   description = "Name of the EC2 instance"
+   default     = "My EC2 Instance"
 }
